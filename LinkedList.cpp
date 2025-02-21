@@ -188,6 +188,32 @@ public:
             std::cout << "List is Empty!"<< std::endl;
         }
     }
+    Node* findMiddleNode()
+    {
+        Node* slowPtr = head;
+        Node* fastPtr = head;
+        if (head == nullptr)
+        {
+            return nullptr;
+        }
+        else if(head->next == nullptr)
+        {
+            return head;
+        }
+        else
+        {
+            while (fastPtr != nullptr)
+            {
+                std::cout << "Slow: " << slowPtr->value << std::endl;
+                std::cout << "Fast: "<< fastPtr->value << std::endl;
+                if (fastPtr->next == nullptr)
+                    return slowPtr;
+                slowPtr = slowPtr->next;
+                fastPtr = fastPtr->next->next;
+            }
+            return slowPtr;
+        }
+    }
 private:
     
     Node* head = nullptr;
