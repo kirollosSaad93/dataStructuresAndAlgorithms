@@ -88,14 +88,14 @@ public:
       {
          // Print right subtree first so it appears at the top
          printTree(node->right, level + 1);
-           
+
          // Indentation for the current level
          for (int i = 0; i < level; i++) 
          {
             std::cout << "    ";
          }
          std::cout << node->value << std::endl;
-           
+
          // Print left subtree
          printTree(node->left, level + 1);
       }

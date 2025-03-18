@@ -112,24 +112,24 @@ private:
 class Stack
 {
 public:
-  Stack(int value)
-  {
-     myDll = new LinkedList(value);
-     myDll->printList();
-  }
-  
-  void push(int value)
-  {
-     myDll->prepend(value);
-     myDll->printList();
-  }
-  
+   Stack(int value)
+   {
+      myDll = new LinkedList(value);
+      myDll->printList();
+   }
+
+   void push(int value)
+   {
+      myDll->prepend(value);
+      myDll->printList();
+   }
+
    void pop()
    {
       myDll->deleteFirst();
       myDll->printList();
    }
-  
+
 private:
    LinkedList* myDll = nullptr;
 };
@@ -139,22 +139,22 @@ class Queue
 public: 
    Queue(int value)
    {
-     myDll = new LinkedList(value);
-     myDll->printList();
+      myDll = new LinkedList(value);
+      myDll->printList();
    }
    
    void enque(int value)
    {
-     myDll->append(value);
-     myDll->printList();
+      myDll->append(value);
+      myDll->printList();
    }
    
    void deque()
    {
-     myDll->deleteFirst();
-     myDll->printList();
+      myDll->deleteFirst();
+      myDll->printList();
    }
-    
+
 private:
    LinkedList* myDll = nullptr;
 };
